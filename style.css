@@ -1,0 +1,61 @@
+/* This is the code for a flexbox grid that has 16 cells total*/
+
+body {
+    background-color: rgb(192, 138, 132);
+    display: flex;
+    justify-content: center;
+}
+
+#container {
+    display: flex;
+    border: solid 3px black;
+    align-self: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 600px;
+    height: 600px;
+}
+
+#divs {
+    width: 6.25%;
+    height: auto;
+    background-color: burlywood;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* This is code for a CSS Grid */
+/* :root {
+    --grid-cols: 1;
+    --grid-rows: 1;
+}
+
+#container {
+    display: grid;
+    width: 600px;
+    height: 600px;
+    grid-gap: 1em;
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+}
+
+.grid-item {
+    padding: 1em;
+    border: 1px solid rgb(0, 0, 0);
+    text-align: center;
+} */
