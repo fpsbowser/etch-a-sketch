@@ -5,7 +5,6 @@ function createDivs(rows, columns) {
     for (let i = 0; i < (rows * columns); i++) {
         var div = document.createElement('div');
         container.appendChild(div).className = 'cell';
-        div.textContent = i + 1;
         div.id = 'cell ' + `${i}`;
     }
 }
@@ -17,6 +16,12 @@ function addEventListenerList(list, event, fn) {
     }
 }
 
+function removeStyleList(list) {
+    for (var i = 0, len = list.length; i < len; i++) {
+        list[i].style.removeProperty('background-color');
+    }
+}
+
 //Nodelist of the divs (cells) created with the createDivs function.
 const cells = document.querySelectorAll('.cell'); 
 
@@ -25,7 +30,16 @@ addEventListenerList(cells, 'mouseenter', changeColor);
 
 //Function that gets called by the eventListener to change backgroundColor in Javascript.
 function changeColor(e) {
-    console.log(e.target.textContent);
     // e.target.className = 'triggered';
     e.target.style.backgroundColor = 'black';
+}
+
+//Button logic
+const button = document.querySelector('.button');
+
+button.addEventListener('click', buttonFunction);
+
+function buttonFunction() {
+    removeStyleList(cells);
+    alert('Canvas cleared!');
 }
